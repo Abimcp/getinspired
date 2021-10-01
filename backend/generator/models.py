@@ -7,3 +7,6 @@ class CompletedQuote(models.Model):
     tweet = models.CharField(max_length=240)
     font = models.CharField(max_length=100)
     picture_url = models.CharField(max_length=2048)
+
+    def __str__(self):
+        return([self.tweet, self.font, self.picture_url])
