@@ -5,12 +5,11 @@ const inspirationReducer = (state=initState, action) => {
         case 'LOADING':
             return { ...state, info: action.payload, loading: true };
         case 'LOAD_RESULT':
-            return { ...state, result: action.payload, loading: false, error: false };
+            return { ...state, info: action.payload, loading: false, error: false };
         case 'SET_ERROR':
             return { ...state, error: action.payload, loading: false }
         default:
             return state;
-        
     };
 };
 
